@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viral Hook Finder - Content Automation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Animated gradient background -->
+    <div class="gradient-bg"></div>
+    
+    <!-- Star accent -->
+    <div class="star-accent">✦</div>
+    
+    <!-- Main container -->
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="subtitle">Content Automation Tool</div>
+            <h1 class="title">Viral Hook Finder</h1>
+            <p class="description">
+                Discover the most viral reels in your niche, transcribe their hooks,<br>
+                and get fed with real, proven content ideas automatically.
+            </p>
+        </header>
+
+        <!-- Configuration Section -->
+        <section class="config-section">
+            <div class="card">
+                <h2 class="card-title">Setup Your Automation</h2>
+                
+                <div class="form-group">
+                    <label for="niche">Your Niche</label>
+                    <input type="text" id="niche" placeholder="e.g., fitness, marketing, cooking" value="fitness">
+                </div>
+
+                <div class="form-group">
+                    <label for="platform">Platform</label>
+                    <select id="platform">
+                        <option value="instagram">Instagram Reels</option>
+                        <option value="tiktok">TikTok</option>
+                        <option value="youtube">YouTube Shorts</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="minViews">Minimum Views</label>
+                        <input type="number" id="minViews" value="100000" step="10000">
+                    </div>
+                    <div class="form-group">
+                        <label for="resultsLimit">Results Limit</label>
+                        <input type="number" id="resultsLimit" value="20" min="5" max="50">
+                    </div>
+                </div>
+
+                <button class="btn-primary" onclick="searchHooks()">
+                    <span class="btn-icon">🔍</span>
+                    Find Viral Hooks
+                </button>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section class="results-section" id="resultsSection" style="display: none;">
+            <h2 class="section-title">Viral Hooks Discovered</h2>
+            <div id="resultsGrid" class="results-grid"></div>
+        </section>
+
+        <!-- API Setup Guide -->
+        <section class="setup-guide">
+            <div class="card">
+                <h2 class="card-title">🚀 Quick Setup Guide</h2>
+                <div class="setup-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Get API Keys</h3>
+                            <p>Sign up for OpenAI (Whisper) and Apify for best results</p>
+                            <div class="api-links">
+                                <a href="https://platform.openai.com/api-keys" target="_blank" class="api-link">OpenAI API →</a>
+                                <a href="https://apify.com" target="_blank" class="api-link">Apify →</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Download Automation Scripts</h3>
+                            <p>Get the Python backend to run on your server or locally</p>
+                            <button class="btn-secondary" onclick="downloadFiles()">
+                                Download Scripts
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Deploy & Automate</h3>
+                            <p>Set up scheduled runs using cron, GitHub Actions, or cloud functions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Grid -->
+        <section class="features-section">
+            <h2 class="section-title">What You Get</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Pattern Detection</h3>
+                    <p>Identifies 10+ proven hook patterns that drive engagement</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎬</div>
+                    <h3>Auto Transcription</h3>
+                    <p>AI-powered transcription of the first 3-5 seconds</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Performance Analysis</h3>
+                    <p>Views, engagement rates, and virality scores</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💡</div>
+                    <h3>Content Ideas</h3>
+                    <p>Adapts viral hooks to your unique angle and niche</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>Full Automation</h3>
+                    <p>Schedule daily runs and get fresh ideas automatically</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>Multi-Platform</h3>
+                    <p>Instagram, TikTok, and YouTube Shorts in one place</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Built with Claude AI • Deploy anywhere</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
